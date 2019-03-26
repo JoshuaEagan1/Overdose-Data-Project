@@ -2,7 +2,7 @@
 ---
 
 This project is meant to display and visualize state level data about overdoses of different types of drugs.
-The data was originally harvested from Healthdata.gov. for technical notes about the database,
+The data these functions are based on was originally harvested from Healthdata.gov. for technical notes about the database,
 or to download an updated version, visit https://catalog.data.gov/dataset/vsrr-provisional-drug-overdose-death-counts-54e35
 
 
