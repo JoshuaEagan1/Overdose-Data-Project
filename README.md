@@ -7,8 +7,8 @@ arguments in quotations. For the **St** arugument, use the two letter abreviatio
 **idcr** argument, choose from: 
 
 1. "Cocaine (T40.5)" 
-"heroin (T40.1)"
-"methadone (T40.3)"
+2. "heroin (T40.1)"
+3. "methadone (T40.3)"
 "Opioids (T40.0-T40.4,T40.6)"
 "Percent with drugs specified"
 "Psychostimulants with abuse potential (T43.6)"
