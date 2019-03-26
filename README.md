@@ -3,7 +3,7 @@
 
 This project is meant to display and visualize state level data about overdoses of different types of drugs.
 The data was originally harvested from Healthdata.gov. for technical notes about the database,
-or to download an updated version, visit (https://catalog.data.gov/dataset/vsrr-provisional-drug-overdose-death-counts-54e35 "data.gov")
+or to download an updated version, visit https://catalog.data.gov/dataset/vsrr-provisional-drug-overdose-death-counts-54e35
 
 
 This function takes a state and an indicator, selects *Data.Value* if *Predicted.Value* is not Present 
