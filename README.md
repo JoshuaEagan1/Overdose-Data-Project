@@ -23,7 +23,8 @@ arguments in quotations. For the **St** arugument, use the two letter abreviatio
 7. "Synthetic opioids, excl. methadone (T40.4)"
 8. "synthetic opioid analgesics other than methadone (T40.4)"
 9. "Natural & semi-synthetic opioids (T40.2)"
-10. "Number of Drug Overdose Deaths", or "Number of Deaths."
+10. "Number of Drug Overdose Deaths"
+11. "Number of Deaths."
 
 Also, if the following error message 
 
