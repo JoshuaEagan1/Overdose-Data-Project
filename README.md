@@ -6,9 +6,9 @@ value. It removes the month of August in 2018, because this month is incomplete.
 arguments in quotations. For the **St** arugument, use the two letter abreviation of the state. For the
 **idcr** argument, choose from: 
 
-*"Cocaine (T40.5)"
-"heroin (T40.1)"
-"methadone (T40.3)"
+-"Cocaine (T40.5)"
+-"heroin (T40.1)"
+-"methadone (T40.3)"
 "Opioids (T40.0-T40.4,T40.6)"
 "Percent with drugs specified"
 "Psychostimulants with abuse potential (T43.6)"
