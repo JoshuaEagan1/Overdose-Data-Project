@@ -6,7 +6,9 @@ The data was originally harvested from Healthdata.gov. for technical notes about
 or to download an updated version, visit https://catalog.data.gov/dataset/vsrr-provisional-drug-overdose-death-counts-54e35
 
 
-This function takes a state and an indicator, selects *Data.Value* if *Predicted.Value* is not Present 
+## state_indicator
+
+state_indicator() takes a state and an indicator, selects *Data.Value* if *Predicted.Value* is not Present 
 or selects *Predicted.Value* if it is present, and returns a dataframe with *Year*, *Month*, and the selected
 value. It removes the month of August in 2018, because this month is incomplete. Be sure to pass both
 arguments in quotations. For the **St** arugument, use the two letter abreviation of the state. For the
