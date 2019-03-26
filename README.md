@@ -33,7 +33,7 @@ Also, if the following error message
 "Error in data.frame(..., check.names = FALSE) :
 arguments imply differing number of rows: 0, 87"
 ```
-is returned, the the data for this indicator and state is not available. 
+is returned, the data for this indicator and state is not available. 
 
 ```
 state_indicator<-function(St,Idcr){
