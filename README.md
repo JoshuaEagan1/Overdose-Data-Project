@@ -1,14 +1,24 @@
 # Overdose-Data-Project
 
-This function takes a state and an indicator, selects **Data.Value** if **Predicted.Value** is not Present 
-or selects **Predicted.Value** if it is present, and returns a dataframe with Year, Month, and the selected
+This function takes a state and an indicator, selects *Data.Value* if *Predicted.Value* is not Present 
+or selects *Predicted.Value* if it is present, and returns a dataframe with *Year*, *Month*, and the selected
 value. It removes the month of August in 2018, because this month is incomplete. Be sure to pass both
-arguments in quotations. For the "St" arugument, use the two letter abreviation of the state. For the
-"idcr" argument, choose from: "Cocaine (T40.5)", "heroin (T40.1)", "methadone (T40.3)", "Opioids 
-(T40.0-T40.4,T40.6)", "Percent with drugs specified", "Psychostimulants with abuse potential (T43.6)",
-"Synthetic opioids, excl. methadone (T40.4)", "synthetic opioid analgesics other than methadone (T40.4)",
-"Natural & semi-synthetic opioids (T40.2)", "Number of Drug Overdose Deaths", or "Number of Deaths." 
+arguments in quotations. For the **St** arugument, use the two letter abreviation of the state. For the
+**idcr** argument, choose from: 
+
+"Cocaine (T40.5)"
+"heroin (T40.1)"
+"methadone (T40.3)"
+"Opioids (T40.0-T40.4,T40.6)"
+"Percent with drugs specified"
+"Psychostimulants with abuse potential (T43.6)"
+"Synthetic opioids, excl. methadone (T40.4)"
+"synthetic opioid analgesics other than methadone (T40.4)"
+"Natural & semi-synthetic opioids (T40.2)"
+"Number of Drug Overdose Deaths", or "Number of Deaths." 
+
 Also, if the following error message 
+
 ```
 "Error in data.frame(..., check.names = FALSE) :
 arguments imply differing number of rows: 0, 87"
