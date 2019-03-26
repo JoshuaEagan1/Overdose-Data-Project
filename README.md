@@ -12,8 +12,8 @@ https://catalog.data.gov/dataset/vsrr-provisional-drug-overdose-death-counts-54e
 state_indicator() takes a state and an indicator, selects *Data.Value* if *Predicted.Value* is not Present 
 or selects *Predicted.Value* if it is present, and returns a dataframe with *Year*, *Month*, and the selected
 value. It removes the month of August in 2018, because this month is incomplete. Be sure to pass both
-arguments in quotations. For the **St** arugument, use the two letter abreviation of the state. For the
-**idcr** argument, choose from: 
+arguments in quotations, and to have the DPLYR package loaded. For the **St** arugument, use the two letter
+abreviation of the state. For the **idcr** argument, choose from: 
 
 1. "Cocaine (T40.5)" 
 2. "heroin (T40.1)"
@@ -33,7 +33,7 @@ Also, if the following error message
 "Error in data.frame(..., check.names = FALSE) :
 arguments imply differing number of rows: 0, 87"
 ```
-is returned, the the data for this indicator and state is not available
+is returned, the the data for this indicator and state is not available. 
 
 ```
 state_indicator<-function(St,Idcr){
