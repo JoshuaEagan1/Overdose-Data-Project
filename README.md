@@ -1,5 +1,4 @@
 # Overdose-Data-Project
----
 
 This project will display and visualize US state level data about overdoses of different types of drugs. The 
 data these functions are based on was originally harvested from Healthdata.gov, but I retreived it from 
@@ -33,7 +32,11 @@ Also, if the following error message
 "Error in data.frame(..., check.names = FALSE) :
 arguments imply differing number of rows: 0, 87"
 ```
-is returned, the data for this indicator and state is not available. 
+is returned, the data for this indicator and state is not available. Data for all indicators is available for
+these areas: CT, DC, ME, NC, NH, NM, NV, NY, OK, OR, RI, SC, US, UT, VA, VT, WA. There is a value labeled YC 
+for which data is also complete, but I am unsure what this signifies. States and territories other
+than the ones previously mentioned only have data available for Number of Drug Overdose Deaths and Number
+of Deaths.
 
 ```
 state_indicator<-function(St,Idcr){
