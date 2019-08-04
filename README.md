@@ -12,7 +12,7 @@ https://catalog.data.gov/dataset/vsrr-provisional-drug-overdose-death-counts-54e
 or selects *Predicted.Value* if it is present, and returns a dataframe with *Year*, *Month*, and the selected
 value. It removes the month of August in 2018, because this month is incomplete. Be sure to pass both
 arguments in quotations, edit the file path in the `read.csv` argument, and to have the DPLYR package loaded.
-For the **St** arugument, use the two letter abreviation of the state. For the **idcr** argument, choose from: 
+For the **St** arugument, use the two letter abbreviation of the state. For the **idcr** argument, choose from: 
 
 1. "Cocaine (T40.5)" 
 2. "heroin (T40.1)"
