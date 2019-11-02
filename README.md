@@ -166,3 +166,23 @@ state_indicator<-function(St,Idcr){
 42 2018      June      168
 43 2018      July      169
 ```
+
+
+## od.vis
+`od.vis()` is a function that visualizes the overdose statistics produced by the `state_indicator` function. This function produces
+either a bar or a line graph. 
+
+### Inputs
+The `state_indicator_output` input takes the output from the state_indicator function. 
+The `graph_type` input takes either `"bar"` or `"line"` with a default of `"line"`. This determines which type of graph is displayed: bar or line.
+
+### Warnings
+Be sure to have the following packages loaded:
+
+```
+library(lubridate)
+library(dplyr)
+library(ggplot2)
+library(scales)
+```
+
