@@ -1,17 +1,37 @@
 # Overdose-Data-Project
 
-This project will display and visualize US state level data about overdoses of different types of drugs. The 
-data these functions are based on was originally harvested from Healthdata.gov, but I retreived it from 
-data.gov at the link below. For technical notes about the database, or to download an updated version, visit
+This project will display and visualize US state level data about overdoses of different types of drugs. All functions
+Were written in R version 3.61. The data these functions are based on was originally harvested from Healthdata.gov.
+
+For technical notes about the database, visit 
 https://catalog.data.gov/dataset/vsrr-provisional-drug-overdose-death-counts-54e35
 
 
 ## state_indicator
 
-`state_indicator()` takes a state and an indicator, selects *Data.Value* if *Predicted.Value* is not present 
+`state_indicator()` takes a dataset, state, an indicator, selects *Data.Value* if *Predicted.Value* is not present 
 or selects *Predicted.Value* if it is present, and returns a dataframe with *Year*, *Month*, and the selected
 value. It removes the month of August in 2018, because this month is incomplete. Be sure to pass both
 arguments in quotations, edit the file path in the `read.csv` argument, and to have the DPLYR package loaded.
+
+For the **data** argument, use the following chunk of code to pull the most recent version of this dataset:
+
+```
+VSRR_OD_Counts<-read.csv(url("https://data.cdc.gov/api/views/xkb8-kh2a/rows.csv?accessType=DOWNLOAD"))
+save(internet_data,file="new_ODDF.Rda")
+```
+
+Be sure to have your working directoy set to the appropriate file folder to save this R object. Use the Following line
+To access the R object you saved:
+
+```
+load("new_ODDF.Rda")
+```
+
+The reason for this way of doing it instead of just loading the object from the API each time you wish to use the 
+`state_indicator()` function is because it caches the time-consuming operation of loading the data from the CDC's API.
+
+
 For the **St** arugument, use the two letter abbreviation of the state. For the **idcr** argument, choose from: 
 
 1. "Cocaine (T40.5)" 
@@ -34,31 +54,29 @@ arguments imply differing number of rows: 0, 87"
 ```
 is returned, the data for this indicator and state is not available. Data for all indicators is available for
 these areas: CT, DC, ME, NC, NH, NM, NV, NY, OK, OR, RI, SC, US, UT, VA, VT, WA. There is a value labeled YC 
-for which data is also complete, but I am unsure what this signifies. States and territories other
-than the ones previously mentioned only have data available for Number of Drug Overdose Deaths and Number
-of Deaths.
+for which data is also complete for New York City. Many states began collecting data on all the statistics in 
+the middle of 2018, but have incomplete data before that point.
 
 ```
-state_indicator<-function(St,Idcr){
-        ODDF<-read.csv("C:/Users/Josh/Desktop/Overdoses.csv")
+state_indicator<-function(data,St,Idcr){
+        ODDF<-data
         StIdcr<-ODDF %>% mutate(Year=factor(Year)) %>%
                 mutate(Month=factor(Month))%>%
                 filter(State==St,Indicator==Idcr)%>%
                 select(Data.Value,Predicted.Value,Year,Month)
-        ind_vect<-c()
+        Deaths<-c()
         SIPV<-StIdcr$Predicted.Value
         SIDV<-StIdcr$Data.Value
-        for(i in 1:87){
+        for(i in 1:length(SIPV)){
                 if(is.na(SIPV[i])){
                         val<-SIDV[i]
                 }else{
                         val<-SIPV[i]
                 }
-                ind_vect<-append(ind_vect,val)
+                Deaths<-append(Deaths,val)
         }
         finished<-StIdcr%>%select(Year,Month)%>%
-                cbind(ind_vect)%>%
-                slice(1:43)
+                cbind(Deaths)
         finished
 }
 ```
@@ -176,7 +194,7 @@ either a bar or a line graph.
 The `state_indicator_output` input takes the output from the state_indicator function. 
 The `graph_type` input takes either `"bar"` or `"line"` with a default of `"line"`. This determines which type of graph is displayed: bar or line.
 
-### Warnings
+### Packages
 Be sure to have the following packages loaded:
 
 ```
