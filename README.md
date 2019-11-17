@@ -21,8 +21,8 @@ VSRR_OD_Counts<-read.csv(url("https://data.cdc.gov/api/views/xkb8-kh2a/rows.csv?
 save(internet_data,file="new_ODDF.Rda")
 ```
 
-Be sure to have your working directoy set to the appropriate file folder to save this R object. Use the Following line
-To access the R object you saved:
+Be sure to have your working directoy set to the appropriate file folder to save this R object. Use the following line
+to access the R object you saved:
 
 ```
 load("new_ODDF.Rda")
