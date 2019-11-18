@@ -1,7 +1,7 @@
 # Overdose-Data-Project
 
 This project will display and visualize US state level data about overdoses of different types of drugs. All functions
-Were written in R version 3.61. The data these functions are based on was originally harvested from Healthdata.gov.
+were written in R version 3.61. The VSRR data was originally harvested from Healthdata.gov.
 
 For technical notes about the database, visit 
 https://catalog.data.gov/dataset/vsrr-provisional-drug-overdose-death-counts-54e35
@@ -23,7 +23,6 @@ save(internet_data,file="new_ODDF.Rda")
 
 Be sure to have your working directoy set to the appropriate file folder to save this R object. Use the following line
 to access the R object you saved:
-
 ```
 load("new_ODDF.Rda")
 ```
@@ -46,15 +45,9 @@ For the **St** arugument, use the two letter abbreviation of the state. For the 
 10. "Number of Drug Overdose Deaths"
 11. "Number of Deaths."
 
-Also, if the following error message 
-
-```
-"Error in data.frame(..., check.names = FALSE) :
-arguments imply differing number of rows: 0, 87"
-```
-is returned, the data for this indicator and state is not available. Data for all indicators is available for
-these areas: CT, DC, ME, NC, NH, NM, NV, NY, OK, OR, RI, SC, US, UT, VA, VT, WA. There is a value labeled YC 
-for which data is also complete for New York City. Many states began collecting data on all the statistics in 
+Data for all indicators is available for
+these areas: CT, DC, ME, NC, NH, NM, NV, NY, OK, OR, RI, SC, US, UT, VA, VT, WA. The value YC which represents
+New York City also contains complete data. Many states began collecting data on all the statistics in 
 the middle of 2018, but have incomplete data before that point.
 
 ```
@@ -131,10 +124,60 @@ state_indicator<-function(data,St,Idcr){
 ```
 
 ```
-> state_indicator("MO","Cocaine (T40.5)")
-
- Error in data.frame(..., check.names = FALSE) : 
-  arguments imply differing number of rows: 0, 87 
+> state_indicator(internet_data,"MO", "Cocaine (T40.5)")
+   Year     Month Deaths
+1  2015     April     NA
+2  2015    August     NA
+3  2015  December     NA
+4  2015  February     NA
+5  2015   January     NA
+6  2015      July     NA
+7  2015      June     NA
+8  2015     March     NA
+9  2015       May     NA
+10 2015  November     NA
+11 2015   October     NA
+12 2015 September     NA
+13 2016     April     NA
+14 2016    August     NA
+15 2016  December     NA
+16 2016  February     NA
+17 2016   January     NA
+18 2016      July     NA
+19 2016      June     NA
+20 2016     March     NA
+21 2016       May     NA
+22 2016  November     NA
+23 2016   October     NA
+24 2016 September     NA
+25 2017     April     NA
+26 2017    August     NA
+27 2017  December     NA
+28 2017  February     NA
+29 2017   January     NA
+30 2017      July     NA
+31 2017      June     NA
+32 2017     March     NA
+33 2017       May     NA
+34 2017  November    149
+35 2017   October     NA
+36 2017 September     NA
+37 2018     April     NA
+38 2018    August     NA
+39 2018  December    140
+40 2018  February    134
+41 2018   January     NA
+42 2018      July     NA
+43 2018      June     NA
+44 2018     March    135
+45 2018       May     NA
+46 2018  November    138
+47 2018   October    138
+48 2018 September     NA
+49 2019     April    150
+50 2019  February    152
+51 2019   January    144
+52 2019     March    146
 ```
 
 ```
@@ -226,3 +269,11 @@ od.vis<-function(state_indicator_output, graph_type= "line"){
                 scale_x_date(labels = date_format("%Y-%m"), breaks = "6 month") # custom x-axis label
 }
 ```
+
+## State Graph Compiler
+
+This R file provides a quick way to fetch the graphs and statistics for a particular state. The State name,
+State Abreviation, and a file path must be specified. The File creates a new file folder containing the 
+relevant graphs. Since some states just started collecting information on more statistics in 2018, some of 
+the graphs returned will have incomplete data before 2018.
+
