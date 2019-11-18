@@ -18,7 +18,7 @@ For the **data** argument, use the following chunk of code to pull the most rece
 
 ```
 VSRR_OD_Counts<-read.csv(url("https://data.cdc.gov/api/views/xkb8-kh2a/rows.csv?accessType=DOWNLOAD"))
-save(internet_data,file="new_ODDF.Rda")
+save(VSRR_OD_Counts,file="new_ODDF.Rda")
 ```
 
 Be sure to have your working directoy set to the appropriate file folder to save this R object. Use the following line
@@ -76,7 +76,7 @@ state_indicator<-function(data,St,Idcr){
 
 ### Example output
 ```
-> state_indicator("MO","Number of Drug Overdose Deaths")
+> state_indicator(VSRR_OD_Counts, "MO", "Number of Drug Overdose Deaths")
    Year     Month ind_vect
 1  2015   January     1113
 2  2015  February     1112
@@ -124,7 +124,7 @@ state_indicator<-function(data,St,Idcr){
 ```
 
 ```
-> state_indicator(internet_data,"MO", "Cocaine (T40.5)")
+> state_indicator(VSRR_OD_Counts,"MO", "Cocaine (T40.5)")
    Year     Month Deaths
 1  2015     April     NA
 2  2015    August     NA
@@ -181,7 +181,7 @@ state_indicator<-function(data,St,Idcr){
 ```
 
 ```
-> state_indicator("CT","Natural & semi-synthetic opioids (T40.2)")
+> state_indicator(VSRR_OD_Counts,"CT","Natural & semi-synthetic opioids (T40.2)")
    Year     Month ind_vect
 1  2015   January      172
 2  2015  February      170
