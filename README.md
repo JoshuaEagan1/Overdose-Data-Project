@@ -1,7 +1,7 @@
 # Overdose-Data-Project
 
-This project will display and visualize US state level data about overdoses of different types of drugs. All functions
-were written in R version 3.61. The VSRR data was originally harvested from Healthdata.gov.
+This project displays and visualizes US state level data about overdoses of different types of drugs. All Code
+was written in R version 3.61. The VSRR data was originally harvested from Healthdata.gov.
 
 For technical notes about the database, visit 
 https://catalog.data.gov/dataset/vsrr-provisional-drug-overdose-death-counts-54e35
