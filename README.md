@@ -274,6 +274,6 @@ od.vis<-function(state_indicator_output, graph_type= "line"){
 
 This R file provides a quick way to fetch the graphs and statistics for a particular state. The State name,
 State Abreviation, and a file path must be specified. The File creates a new file folder containing the 
-relevant graphs. Since some states just started collecting information on more statistics in 2018, some of 
+relevant graphs. Since some states just started collecting information on more substances in 2018, some of 
 the graphs returned will have incomplete data before 2018.
 
