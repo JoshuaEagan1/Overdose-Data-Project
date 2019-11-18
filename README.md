@@ -1,7 +1,8 @@
 # Overdose-Data-Project
 
-This project displays and visualizes US state level data about overdoses of different types of drugs. All Code
-was written in R version 3.61. The VSRR data was originally harvested from Healthdata.gov.
+This project displays and visualizes US state level counts of overdose deaths of different categories of drugs.
+All Code was written in R version 3.61. The data that corresponds to this code is the VSRR Provisional Drug 
+Overdose Death Counts dataset published by the Center for Disease Control.
 
 For technical notes about the database, visit 
 https://catalog.data.gov/dataset/vsrr-provisional-drug-overdose-death-counts-54e35
