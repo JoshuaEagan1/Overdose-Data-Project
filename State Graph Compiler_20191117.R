@@ -2,13 +2,15 @@
 
 #Run entire File
 
+load("new_ODDF.Rda")
+
 state.name="Nevada"
 state.abv="NV"
 
 #Edit the file path in both of the setwd() lines to your desired directory path
 
 setwd("C:/Users/Josh/Dropbox/R studio/ODvis")
-dir.create(paste(state.name, "Visualizations"))
+dir.create(paste(state.name, " Visualizations"))
 setwd(paste("C:/Users/Josh/Dropbox/R studio/ODvis/", state.name, " Visualizations", sep=""))
 
 
@@ -20,7 +22,6 @@ library(lubridate)
 library(dplyr)
 library(ggplot2)
 library(scales)
-library(dplyr)
 
 
 state_indicator<-function(data,St,Idcr){
@@ -67,16 +68,16 @@ od.vis<-function(state_indicator_output, graph_type= "line", desired_title="Numb
                 ggtitle(desired_title)
 }
 
-Cocaine<-state_indicator(internet_data, state.abv, "Cocaine (T40.5)")
-Heroin<-state_indicator(internet_data, state.abv, "heroin (T40.1)")
-Methadone<-state_indicator(internet_data, state.abv, "methadone (T40.3)")
-Opioids<-state_indicator(internet_data, state.abv, "Opioids (T40.0-T40.4,T40.6)")
-Psychostimulants<-state_indicator(internet_data, state.abv, "Psychostimulants with abuse potential (T43.6)")
-Synthetic_Opioids<-state_indicator(internet_data, state.abv, "Synthetic opioids, excl. methadone (T40.4)")
-Synthetic_Opioid_Analgesics<-state_indicator(internet_data, state.abv, "synthetic opioid analgesics other than methadone (T40.4)")
-Natural_and_Semisynthetic_Opioids<-state_indicator(internet_data, state.abv, "Natural & semi-synthetic opioids (T40.2)")
-Overdoses<-state_indicator(internet_data, state.abv, "Number of Drug Overdose Deaths")
-Deaths<-state_indicator(internet_data, state.abv, "Number of Deaths")
+Cocaine<-state_indicator(VSRR_OD_Counts, state.abv, "Cocaine (T40.5)")
+Heroin<-state_indicator(VSRR_OD_Counts, state.abv, "heroin (T40.1)")
+Methadone<-state_indicator(VSRR_OD_Counts, state.abv, "methadone (T40.3)")
+Opioids<-state_indicator(VSRR_OD_Counts, state.abv, "Opioids (T40.0-T40.4,T40.6)")
+Psychostimulants<-state_indicator(VSRR_OD_Counts, state.abv, "Psychostimulants with abuse potential (T43.6)")
+Synthetic_Opioids<-state_indicator(VSRR_OD_Counts, state.abv, "Synthetic opioids, excl. methadone (T40.4)")
+Synthetic_Opioid_Analgesics<-state_indicator(VSRR_OD_Counts, state.abv, "synthetic opioid analgesics other than methadone (T40.4)")
+Natural_and_Semisynthetic_Opioids<-state_indicator(VSRR_OD_Counts, state.abv, "Natural & semi-synthetic opioids (T40.2)")
+Overdoses<-state_indicator(VSRR_OD_Counts, state.abv, "Number of Drug Overdose Deaths")
+Deaths<-state_indicator(VSRR_OD_Counts, state.abv, "Number of Deaths")
 
 ###################################################################################################
 
