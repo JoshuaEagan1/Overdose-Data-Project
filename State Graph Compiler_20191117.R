@@ -2,14 +2,13 @@
 
 #Run entire File
 
-load("new_ODDF.Rda")
-
 state.name="Nevada"
 state.abv="NV"
 
 #Edit the file path in both of the setwd() lines to your desired directory path
 
 setwd("C:/Users/Josh/Dropbox/R studio/ODvis")
+load("new_ODDF.Rda")
 dir.create(paste(state.name, " Visualizations"))
 setwd(paste("C:/Users/Josh/Dropbox/R studio/ODvis/", state.name, " Visualizations", sep=""))
 
