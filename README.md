@@ -273,11 +273,11 @@ od.vis<-function(state_indicator_output, graph_type= "line"){
 ```
 
 ### Output
-![Number of Overdose Deaths in Missouri](C:/Users/Josh/Dropbox/R studio/ODvis/Missouri Visualizations/MO Total Overdose Deaths Bar)
+![Number of Overdose Deaths in Missouri](C:/Users/Josh/Dropbox/R studio/ODvis/Missouri Visualizations/MO Total Overdose Deaths Bar.jpeg)
 
-![Number of Cocaine Overdose Deaths in Nevada](C:/Users/Josh/Dropbox/R studio/ODvis/Nevada Visualizations/NV Cocaine Deaths Bar)
+![Number of Cocaine Overdose Deaths in Nevada](C:/Users/Josh/Dropbox/R studio/ODvis/Nevada Visualizations/NV Cocaine Deaths Bar.jpeg)
 
-![Total Number of Deaths in Florida (line graph)](C:/Users/Josh/Dropbox/R studio/ODvis/Florida Visualizations/FL Total Deaths Line)
+![Total Number of Deaths in Florida (line graph)](C:/Users/Josh/Dropbox/R studio/ODvis/Florida Visualizations/FL Total Deaths Line.jpeg)
 
 ### Credit
 I borrowed a section of code from the following article on R-bloggers.com to construct the od.vis function [Visualizing Weekly or Monthly Totals](https://www.r-bloggers.com/plot-weekly-or-monthly-totals-in-r/) (see the "graph by month" section.)
