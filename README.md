@@ -273,18 +273,12 @@ od.vis<-function(state_indicator_output, graph_type= "line"){
 ```
 
 ### Output
-![alt text](http://url/to/img.png)
-![Number of Overdose Deaths in Missouri](https://github.com/JoshuaEagan1/Overdose-Data-Project/blob/master/FL%20Total%20Overdose%20Deaths%20Line.jpeg/to/img.png)
+
+![Number of Overdose Deaths in Missouri](https://github.com/JoshuaEagan1/Overdose-Data-Project/blob/master/FL%20Total%20Overdose%20Deaths%20Line.jpeg/to/img.jpeg)
 
 ![Number of Cocaine Overdose Deaths in Nevada](https://github.com/JoshuaEagan1/Overdose-Data-Project/blob/master/MO%20Total%20Overdose%20Deaths%20Bar.jpeg/to/img.jpeg)
 
-![Total Number of Deaths in Florida (line graph)](http://url/to/img.png)
-
-https://github.com/JoshuaEagan1/Overdose-Data-Project/blob/master/FL%20Total%20Overdose%20Deaths%20Line.jpeg
-
-https://github.com/JoshuaEagan1/Overdose-Data-Project/blob/master/MO%20Total%20Overdose%20Deaths%20Bar.jpeg
-
-https://github.com/JoshuaEagan1/Overdose-Data-Project/blob/master/NV%20Cocaine%20Deaths%20Bar.jpeg
+![Total Number of Deaths in Florida (line graph)](https://github.com/JoshuaEagan1/Overdose-Data-Project/blob/master/NV%20Cocaine%20Deaths%20Bar.jpeg/to/img.jpeg)
 
 
 ### Credit
