@@ -4,15 +4,19 @@
 
 state.name="Nevada"
 state.abv="NV"
+file.path=" "
 
-#Edit the file path in both of the setwd() lines to your desired directory path
+#file.path should be a point to the directory where you would like the new graphs to be located.
 
-setwd("C:/Users/Josh/Dropbox/R studio/ODvis")
+setwd("file.path")
 load("new_ODDF.Rda")
+
 dir.create(paste(state.name, " Visualizations"))
-setwd(paste("C:/Users/Josh/Dropbox/R studio/ODvis/", state.name, " Visualizations", sep=""))
+setwd(paste("file.path", "/",state.name, " Visualizations", sep=""))
+#change / to \ if running this on a MAC Operating System.
 
 
+#Don't Edit Code Below this Line
 #################################################################################################
 
 load("new_ODDF.Rda")
