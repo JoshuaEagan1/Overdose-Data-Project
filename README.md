@@ -270,6 +270,8 @@ od.vis<-function(state_indicator_output, graph_type= "line"){
                 scale_x_date(labels = date_format("%Y-%m"), breaks = "6 month") # custom x-axis label
 }
 ```
+### Credit
+I borrowed a section of code from the following article on R-bloggers.com to construct the od.vis function. https://www.r-bloggers.com/plot-weekly-or-monthly-totals-in-r/. See the "graph by month" section.
 
 ## State Graph Compiler
 
