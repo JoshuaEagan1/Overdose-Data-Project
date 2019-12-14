@@ -5,7 +5,8 @@ All Code was written in R version 3.61. The data that corresponds to this code i
 Overdose Death Counts dataset published by the Center for Disease Control.
 
 For technical notes about the database, visit 
-https://catalog.data.gov/dataset/vsrr-provisional-drug-overdose-death-counts-54e35
+[Data.gov's VSRR notes](https://catalog.data.gov/dataset/vsrr-provisional-drug-overdose-death-counts-54e35)
+
 
 
 ## state_indicator
@@ -271,7 +272,7 @@ od.vis<-function(state_indicator_output, graph_type= "line"){
 }
 ```
 ### Credit
-I borrowed a section of code from the following article on R-bloggers.com to construct the od.vis function. https://www.r-bloggers.com/plot-weekly-or-monthly-totals-in-r/. See the "graph by month" section.
+I borrowed a section of code from the following article on R-bloggers.com to construct the od.vis function [Visualizing Weekly or Monthly Totals](https://www.r-bloggers.com/plot-weekly-or-monthly-totals-in-r/) (see the "graph by month" section.)
 
 ## State Graph Compiler
 
