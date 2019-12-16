@@ -13,8 +13,8 @@ For technical notes about the database, visit
 
 `state_indicator()` takes a dataset, state, an indicator, selects *Data.Value* if *Predicted.Value* is not present 
 or selects *Predicted.Value* if it is present, and returns a dataframe with *Year*, *Month*, and the selected
-value. It removes the month of August in 2018, because this month is incomplete. Be sure to pass both
-arguments in quotations, edit the file path in the `read.csv` argument, and to have the DPLYR package loaded.
+value. Be sure to pass both arguments in quotations, edit the file path in the `read.csv` argument, and to have 
+the DPLYR package loaded.
 
 For the **data** argument, use the following chunk of code to pull the most recent version of this dataset:
 
